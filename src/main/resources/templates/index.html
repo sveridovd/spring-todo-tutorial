@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script type="text/html" id="todo-template">
+        <li class="box is-flex is-justify-content-space-between" style="padding-bottom: 8px;" data-todo-id="{{ id }}">
+            <span>{{ text }}</span>
+            <button class="delete"></button>
+        </li>
+    </script>
+</head>
+<body>
+<main class="container" style="padding-top: 32px;">
+
+    <div class="columns">
+        <div class="column is-one-quarter">
+            <form class="box" id="todo-form">
+                <div class="field">
+                    <label class="label">New Todo:</label>
+                    <div class="control">
+                        <input class="input" type="text" id="todo-text" placeholder="Type what you should do">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="column is-one-quarter">
+            <ul id="todos-list"></ul>
+        </div>
+    </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
